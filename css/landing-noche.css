@@ -1,0 +1,323 @@
+/*
+DECLARACIÓN DE VARIABLES
+*/
+:root {
+    --color-negro: #232323;
+    --color-rojo: #D74A2F;
+    --color-blanco: #FFFFFF;
+    --archivo-black: 'Archivo Black', sans-serif;
+    --lexend-deca: 'Lexend Deca', sans-serif;
+    --color-fondo: #232323cc;
+}
+
+/*
+IMPORTAR TIPOGRAFÍAS
+*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--color-blanco);
+}
+
+/*
+CSS HEADER
+*/
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 5em;
+    border-bottom: 2px solid var(--color-rojo);
+    background-color: var(--color-negro);
+}
+
+.header__logo {
+    width: 14vw;
+    padding-left: 1.5em;
+    padding-top: 0.4em;
+}
+
+.header__menu__element{
+    display: inline-block;
+    margin-top: -1em;
+    padding: 0em 3em;
+}
+
+.header__menu__element a {
+    text-decoration: none;
+    font-size: 1.1vw;
+    color: var(--color-blanco);
+    font-family: var(--archivo-black);
+    font-weight: bold;
+}
+
+.header__menu__element a:hover {
+    color: var(--color-rojo);
+}
+
+.botones {
+    border: none;
+    background: none;
+    font-size: 1.1vw;
+    color: var(--color-blanco);
+}
+
+.botones:hover {
+    color: var(--color-rojo);
+}
+
+/*
+CSS SIDEBAR
+*/
+
+.main__sidebar {
+    height: 72.5vh;
+    margin: 1em 0em;
+    width: 12.5vw;
+    border-right: 2px solid var(--color-blanco);
+}
+
+.main__sidebar__menu {
+    padding: 1.5vh 3vw;
+}
+
+.main__sidebar__menu__element {
+    display: block;
+    padding: 1.8vh 0.6vw;
+}
+
+.main__sidebar__menu__element a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-family: var(--archivo-black);
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.main__sidebar__menu__element a:hover {
+    color: var(--color-rojo);
+}
+
+/*
+CSS BUSCADOR
+*/
+
+.main__separador__buscador {
+    border: 1px solid var(--color-blanco);
+    width: 50vw;
+    border-radius: 3em;
+    margin-bottom: 7vh;
+    height: 4vh;
+}
+
+.main__separador__buscador__input {
+    text-decoration: none;
+    border: none;
+    border-radius: 3em;
+    width: 95%;
+    height: 2.9vh;
+    color: var(--color-blanco);
+    background: none;
+}
+
+.main__separador__buscador__icono {
+    color: var(--color-blanco);
+    font-size: 1vw;
+    padding-top: 0.8vh;
+}
+
+/*
+CSS MAIN
+*/
+
+body {
+    background: var(--color-fondo);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.main__separador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4vh;
+    width: 86.8vw;
+    height: 77vh;
+    overflow: scroll;
+}
+
+.main__separador__elementos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.main__separador__elementos__titulo {
+    width: 100%;
+    padding: 0vh 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main__separador__elementos__titulo h1 {
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: 1.5vw;
+    font-family: var(--archivo-black);
+}
+
+.main__separador__elementos__titulo__iconos {
+    font-size: 1.3vw;
+    color: var(--color-blanco);
+}
+
+.main__separador__elementos__elemento {
+    padding: 2vh 0.4vw 7vh 0.4vw;
+
+}
+
+.main__separador__elementos__elemento__portada {
+    width: 18vw;
+}
+
+.main__separador__elementos__elemento__portada--artista {
+    width: 17rem;
+    height: 14rem;
+}
+
+.portadaArtista {
+    border: 1px solid var(--color-negro);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0vh 2vw 0vh 2vw;
+}
+
+.main__separador__elementos__elemento__titulo {
+    font-size: 1vw;
+    font-family: var(--archivo-black);
+    
+}
+
+.main__separador__elementos__elemento__creador {
+    font-size: 0.8vw;
+    font-family: var(--lexend-deca);
+    font-weight: lighter;
+}
+
+.portadaArtista {
+    border: 1px solid var(--color-negro);
+    border-radius: 50%;
+}
+
+.artista {
+    text-align: center;
+}
+
+/*
+CSS FOOTER
+*/
+
+footer {
+    border-top: 2px solid var(--color-rojo);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 13vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--color-negro);
+}
+
+.footer__cancionportada {
+    align-self: center;
+    display: inherit;
+    width: 20vw;
+    margin-left: -4vw;    
+}
+
+.footer__cancionportada__imagen {
+    width: 4vw;
+}
+
+.footer__cancionportada__texto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0em 1em;
+}
+
+.footer__cancionportada__texto__cancion {
+    padding-top: 0.5em;
+    font-size: 1em;
+    font-family: var(--archivo-black);
+    font-weight: bold;
+}
+
+.footer__cancionportada__texto__artista {
+    padding-top: 0.5em;
+    font-size: 1em;
+    font-family: var(--lexend-deca);
+}
+
+.footer__botonesduracion {
+    display: flex;
+    flex-wrap: wrap;
+    width: 79vw;
+    justify-content: center;
+    align-items: center;
+    margin-left: -32vw;
+}
+
+.footer__botonesduracion__botones {
+    padding-top: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.footer__botonesduracion__botones li {
+    display: inline-block;
+}
+
+.footer__botonesduracion__botones__grupo {
+    padding: 1em 5em;
+    display: inline;
+}
+
+.footer__botonesduracion__botones__grupo__boton {
+    background: none;
+    border: none;
+    font-size: 1vw;
+}
+
+.footer__botonesduracion__duracion {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.footer__botonesduracion__duracion * {
+    display: inline-block;
+}
+
+.footer__botonesduracion__duracion__barra {
+    border: 1px solid var(--color-negro);
+    border-radius: 2em;
+    height: 0.8em;
+    width: 38vw;
+    background-color: var(--color-blanco);
+}

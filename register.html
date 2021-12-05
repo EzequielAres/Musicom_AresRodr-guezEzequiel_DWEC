@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/register.css'>
+    <script src="js/register.js"></script>
+</head>
+<body>
+    <section class="contenedor">
+        <form action="" class="contenedor__formulario">
+            <img src="img/logo.svg" alt="Logo" class="contenedor__formulario__logo">
+
+
+            <label for="nombre">Nombre de usuario</label>
+            <input type="text" name="nombre" id="inputNombre">
+            <div class="mensaje" id="nombre"></div>
+
+
+            <label for="correo">Dirección de correo electrónico</label>
+            <input type="email" name="correo" id="inputEmail">
+            <div class="mensaje" id="email"></div>
+
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="inputContraseña">
+            <div class="mensaje" id="contraseña"></div>
+
+
+            <a href="#" class="contenedor__formulario__condicionesypolitica">Condiciones y política de privacidad</a>
+            <a href="landing.html" class="contenedor__formulario__boton">Registrarme</a>
+            <h1 class="contenedor__formulario__texto">¿Ya estás registrado?</h1>
+            <a href="login.html" class="contenedor__formulario__boton">Iniciar sesión</a>
+        </form>
+        
+        <script>
+            
+            inputNombre.onfocus = function () {
+                if (this.classList.contains('error')) {
+                    this.classList.remove('error');
+                    nombre.innerHTML = "";
+                }
+            }
+
+            inputNombre.onblur = function () {
+                let valor = inputNombre.value;
+                let expresion = /[A-Za-z0-9]{4,}/;
+
+                if (valor == "") {
+                    inputNombre.classList.add("error");
+                    nombre.innerHTML = "El campo no puede estar vacío.";
+                } else if (!expresion.test(valor)) {
+                    inputNombre.classList.add("error");
+                    nombre.innerHTML = "Nombre no válido."
+                } else {
+                    inputNombre.classList.add("correcto");
+                }
+            }
+
+            inputEmail.onfocus = function () {
+                if (this.classList.contains('error')) {
+                    this.classList.remove('error');
+                    email.innerHTML = "";
+                }
+            }
+
+            inputEmail.onblur = function () {
+                let valor = inputEmail.value;
+                let expresion =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                
+                
+                if (valor == "") {
+                    inputEmail.classList.add("error");
+                    email.innerHTML = "El campo no puede estar vacío."
+                } else if (!expresion.test(valor)) {
+                    inputEmail.classList.add("error");
+                    email.innerHTML = "Correo electrónico no válido."
+                } else {
+                    inputEmail.classList.add("correcto");
+                }
+            }
+
+            inputContraseña.onfocus = function () {
+                if (this.classList.contains('error')) {
+                    this.classList.remove('error');
+                    contraseña.innerHTML = "";
+                }
+            }
+
+            inputContraseña.onblur = function () {
+                let valor = inputContraseña.value;
+                let expresion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+                
+                if (valor == "") {
+                    inputContraseña.classList.add("error");
+                    contraseña.innerHTML = "El campo no puede estar vacío.";
+                } else if (!expresion.test(valor)) {
+                    inputContraseña.classList.add("error");
+                    contraseña.innerHTML = "Debes introducir una contraseña segura";
+                } else {
+                    inputContraseña.classList.add("correcto");
+                }
+            }
+
+        </script>
+    </section>
+</body>
+</html>

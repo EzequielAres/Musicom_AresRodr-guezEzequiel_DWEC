@@ -1,0 +1,214 @@
+/*
+DECLARACIÓN DE VARIABLES
+*/
+:root {
+    --color-negro: #232323;
+    --color-rojo: #D74A2F;
+    --color-blanco: #FFFFFF;
+    --archivo-black: 'Archivo Black', sans-serif;
+    --lexend-deca: 'Lexend Deca', sans-serif;
+}
+
+/*
+IMPORTAR TIPOGRAFÍAS
+*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-negro);
+}
+
+.contenedor__formulario {
+    background: var(--color-negro);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid var(--color-negro);
+    border-radius: 1em;
+    height: 73vh;
+    width: 32vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__formulario * {
+    color: var(--color-blanco);
+    padding: 1.2vh 1.1vw;
+    font-family: var(--archivo-black);
+    font-weight: bold;
+}
+
+.contenedor__formulario__logo {
+    width: 15vw;
+    margin-bottom: 3vh;
+}
+
+.contenedor__formulario label {
+    align-self: flex-start;
+    margin-left: 1.9vw;
+    font-size: 0.8vw;
+}
+
+.contenedor__formulario input{
+    width: 26vw;
+    height: 1.5vh;
+}
+
+.contenedor__formulario__recuerdameenlace {
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 97.8%;
+}
+
+.contenedor__formulario__recuerdameenlace__enlace {
+    font-size: 0.7vw;
+}
+
+.contenedor__formulario input[type=checkbox] {
+    width: 1vw;
+    margin-left: -1.3vw;
+}
+
+.contenedor__formulario a {
+    text-decoration: none;
+}
+
+.contenedor__formulario > a {
+    font-size: 1vw;
+}
+
+.contenedor__formulario__texto {
+    font-size: 1vw;
+    margin-top: 2.5vh;
+    margin-bottom: -3vh;
+    font-weight: bold;
+}
+
+.contenedor__formulario__boton {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    color: var(--color-blanco);
+    background-color: var(--color-rojo);
+    padding: 1.6vh 6vw;
+    border: 1px solid var(--color-negro);
+    border-radius: 2em;
+}
+
+.mensaje {
+    align-self: flex-start;
+    margin-left: 1.9vw;
+    font-size: 0.8vw;
+    color: var(--color-rojo);
+}
+
+.error {
+    border-color: var(--color-rojo);
+    color: var(--color-rojo);
+}
+
+.correcto {
+    border-color: green;
+}
+
+@media (max-width: 1030px) {
+    .contenedor__formulario {
+        height: 75vh;
+        width: 50vw;
+    }
+
+    .contenedor__formulario__logo {
+        width: 20vw;
+    }
+
+    .contenedor__formulario label {
+        font-size: 1.5vw;
+    }
+
+    .contenedor__formulario input{
+        width: 44vw;
+        height: 1.5vh;
+    }
+
+    .contenedor__formulario__recuerdameenlace__enlace {
+        font-size: 1.4vw;
+    }    
+
+    .contenedor__formulario input[type=checkbox] {
+        width: 2vw;
+    }
+
+    .contenedor__formulario > a {
+        font-size: 1.7vw;
+    }
+
+    .contenedor__formulario__texto {
+        font-size: 1.7vw;
+    }
+
+    .contenedor__formulario__boton {
+        padding: 1.6vh 11vw;
+    }
+
+    .mensaje {
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .contenedor__formulario {
+        height: 73vh;
+        width: 70vw;
+    }
+
+    .contenedor__formulario__logo {
+        width: 30vw;
+    }
+
+    .contenedor__formulario label {
+        font-size: 2.4vw;
+    }
+
+    .contenedor__formulario input{
+        width: 63.5vw;
+        height: 1.9vh;
+    }
+
+    .contenedor__formulario__recuerdameenlace__enlace {
+        font-size: 2.4vw;
+    }    
+
+    .contenedor__formulario input[type=checkbox] {
+        width: 2.4vw;
+    }
+
+    .contenedor__formulario > a {
+        font-size: 2.4vw;
+    }
+
+    .contenedor__formulario__texto {
+        font-size: 2.4vw;
+    }
+
+    .contenedor__formulario__boton {
+        padding: 1.6vh 14vw;
+    }
+
+    .mensaje {
+        font-size: 1.7vw;
+    }
+}

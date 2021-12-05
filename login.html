@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+</head>
+<body>
+    <section class="contenedor">
+        <form action="" class="contenedor__formulario">
+            <img src="img/logo.svg" alt="Logo" class="contenedor__formulario__logo">
+            
+            <label for="correo">Dirección de correo electrónico</label>
+            <input type="email" name="correo" id="inputEmail">
+            <div class="mensaje" id="email"></div>
+            
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="inputContraseña">
+            <div class="mensaje" id="contraseña"></div>
+
+            <div class="contenedor__formulario__recuerdameenlace">
+                <label class="contenedor__formulario__recuerdameenlace__recuerdame">
+                    <input type="checkbox" name="recuerdame">
+                    Recuerdame
+                </label>
+                <a href="#" class="contenedor__formulario__recuerdameenlace__enlace">¿Has olvidado tu contraseña?</a>
+            </div>
+            <a href="landing.html" class="contenedor__formulario__boton">Iniciar sesión</a>
+            <h1 class="contenedor__formulario__texto">¿No estás registrado?</h1>
+            <a href="register.html" class="contenedor__formulario__boton">Regístrate</a>
+        </form>
+    </section>
+
+    <script>
+        inputEmail.onfocus = function () {
+                if (this.classList.contains('error')) {
+                    this.classList.remove('error');
+                    email.innerHTML = "";
+                }
+            }
+
+            inputEmail.onblur = function () {
+                let valor = inputEmail.value;
+                let expresion =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                
+                
+                if (valor == "") {
+                    inputEmail.classList.add("error");
+                    email.innerHTML = "El campo no puede estar vacío."
+                } else if (!expresion.test(valor)) {
+                    inputEmail.classList.add("error");
+                    email.innerHTML = "Correo electrónico no válido."
+                } else {
+                    inputEmail.classList.add("correcto");
+                }
+            }
+
+            inputContraseña.onfocus = function () {
+                if (this.classList.contains('error')) {
+                    this.classList.remove('error');
+                    contraseña.innerHTML = "";
+                }
+            }
+
+            inputContraseña.onblur = function () {
+                let valor = inputContraseña.value;
+                let expresion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+                
+                if (valor == "") {
+                    inputContraseña.classList.add("error");
+                    contraseña.innerHTML = "El campo no puede estar vacío.";
+                } else if (!expresion.test(valor)) {
+                    inputContraseña.classList.add("error");
+                    contraseña.innerHTML = "Debes introducir una contraseña segura";
+                } else {
+                    inputContraseña.classList.add("correcto");
+                }
+            }
+    </script>
+</body>
+</html>

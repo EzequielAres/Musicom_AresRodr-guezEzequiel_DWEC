@@ -1,0 +1,274 @@
+/*
+DECLARACIÓN DE VARIABLES
+*/
+:root {
+    --color-negro: #232323;
+    --color-rojo: #D74A2F;
+    --color-blanco: #FFFFFF;
+    --archivo-black: 'Archivo Black', sans-serif;
+    --lexend-deca: 'Lexend Deca', sans-serif;
+}
+
+/*
+IMPORTAR TIPOGRAFÍAS
+*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+CSS HEADER
+*/
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 5em;
+    border-bottom: 2px solid var(--color-rojo);
+}
+
+.header__logo {
+    width: 14vw;
+    padding-left: 1.5em;
+    padding-top: 0.4em;
+}
+
+.header__menu__element{
+    display: inline-block;
+    padding: 0em 3em;
+}
+
+.header__menu__element a {
+    text-decoration: none;
+    font-size: 1.1vw;
+    color: var(--color-negro);
+    font-family: var(--archivo-black);
+    font-weight: bold;
+}
+
+.header__menu__element a:hover {
+    color: var(--color-rojo);
+}
+
+.botones {
+    border: none;
+    background: none;
+    font-size: 1.1vw;
+    color: var(--color-negro);
+}
+
+.botones:hover {
+    color: var(--color-rojo);
+}
+
+/*
+CSS MAIN
+*/
+
+main {
+    width: 100%;
+    background: url("../img/fondo-inicio.jpg") center;
+    background-size: cover;
+    height: 90.8vh;
+}
+
+.main__contenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__contenido__titulo {
+    color: var(--color-negro);
+    font-family:  var(--archivo-black);
+    font-weight: bold;
+    font-size: 4.5vw;
+    padding: 0.4em;
+    text-shadow: 2px 2px 3px var(--color-blanco);
+}
+
+.main__contenido__boton {
+    background-color: var(--color-rojo);
+    border-radius: 2em;
+    padding: 0.5em 3em;
+    font-size: 1.4vw;
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-family: var(--archivo-black);
+    font-weight: bold;
+}
+
+/*
+CSS FOOTER
+*/
+
+footer {
+    border-top: 2px solid var(--color-rojo);
+}
+
+.footer__primerafila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 5em;
+}
+
+.footer__primerafila__logo {
+    padding-left: 1.5em;
+    width: 12vw;
+    padding-top: 0.4em;
+}
+
+.footer__primerafila__rrss__element {
+    display: inline-block;
+    padding: 0em 0.3em;
+}
+
+.footer__primerafila__rrss__element a {
+    color: var(--color-negro);
+    font-size: 1.3vw;
+}
+
+.footer__segundafila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 5em;
+}
+
+.footer__segundafila__element {
+    display: inline-block;
+    padding-left: 1.5em;
+}
+
+.footer__segundafila__element a {
+    color: var(--color-negro);
+    text-decoration: none;
+    font-size: 1vw;
+    font-family: var(--lexend-deca);
+}
+
+.footer__segundafila__element a:hover {
+    color: var(--color-rojo);
+}
+
+@media (max-width: 960px) {
+    /*
+    CSS HEADER
+    */
+    .header__logo {
+        width: 17vw;
+    }
+    
+    .header__menu__element a {
+        font-size: 1.6vw;
+    }
+    
+    .header__menu__element{
+        padding: 0em 1.3em;
+    }
+    
+    .botones {
+        font-size: 1.6vw;
+    }
+
+    /*
+    CSS FOOTER
+    */
+
+
+    .footer__primerafila__logo {
+        width: 17vw;
+    }
+
+    .footer__primerafila__rrss__element a {
+        font-size: 1.4vw;
+    }
+
+    .footer__primerafila__rrss__element i {
+        font-size: 1.8vw;
+    }
+
+    .footer__segundafila__element a {
+        font-size: 1.4vw;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    
+    header, .footer__primerafila, .footer__segundafila {
+        padding: 1em 2em;
+    }
+
+    /*
+    CSS HEADER
+    */
+
+    .header__logo {
+        width: 20vw;
+    }
+    
+    .header__menu__element a {
+        font-size: 1.9vw;
+    }
+    
+    .botones {
+        font-size: 1.9vw;
+    }
+
+    .header__menu__element{
+        padding: 0em 1em;
+    }
+
+    
+    /*
+    CSS FOOTER
+    */
+
+
+    .footer__primerafila__logo {
+        width: 20vw;
+    }
+
+    .footer__primerafila__rrss__element a {
+        font-size: 2vw;
+    }
+
+    .footer__primerafila__rrss__element i {
+        font-size: 2vw;
+    }
+
+    .footer__segundafila__element a {
+        font-size: 2vw;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+}
+
+/*
+1300
+1024
+980
+780
+600
+*/
