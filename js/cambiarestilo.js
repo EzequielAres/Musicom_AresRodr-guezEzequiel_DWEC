@@ -1,3 +1,11 @@
+/*
+Esta función permite cambiar la hoja de estilo de la página en la que nos encontramos
+
+    Para ello seleccionamos el link de la hoja de estilo y, dependiendo de la hoja que tenga en ese momento la página, lo cambiamos a modo noche o modo día.
+
+    También, ya que el logo es diferente según el modo en el que nos encontremos, vamos recorriendo todos los logos de la página y lo cambiamos a su modo correspondiente.
+*/
+
 function cambiarestilo() {
     let cadena = document.getElementById("estilo");
     cadena = cadena.href.split("/");

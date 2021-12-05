@@ -32,6 +32,16 @@
         </form>
     </section>
 
+    <!--
+        En la siguiente función validaremos el formulario mediante expresiones regulares
+
+        Según el campo en el que nos encontremos comprobamos que el campo no esté vacío y que cumpla con la expresión regular correspondiente. Además, dependiendo del error 
+        introucimos un pequeño texto debajo del campo indicando este.
+
+        Si el campo cumple con la expresión regular cambiamos el estilo a correcto.
+
+    -->
+
     <script>
         inputEmail.onfocus = function () {
                 if (this.classList.contains('error')) {

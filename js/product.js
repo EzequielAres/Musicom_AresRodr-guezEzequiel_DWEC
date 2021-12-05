@@ -1,7 +1,20 @@
+/*
+    Esta función selecciona el padre del botón que hemos pulsado para tener la referencia del contenedor, una vez seleccionado el contenedor que queremos eliminar se lo indicamos al padre.
+*/
+
 function borrar(element) {
     let elementoBorrar = element.parentNode.parentNode;
     element.parentNode.parentNode.parentNode.removeChild(elementoBorrar);
 }
+
+
+/*
+Esta función nos permite introducir una canción a la lista (obviamente esto no debería ser de esta forma ya que se tendría que comunicar con la API)
+
+Para hacer esto recogemos los valores que hemos introducido en el formulario e introducimos el nuevo contenedor al DOM mediante codigo HTML.
+
+También indicamos que no se recarge la página al "enviar" el formulario para que no se eliminen los cambios.
+*/
 
 function añadirCancion(element) {
     event.preventDefault();

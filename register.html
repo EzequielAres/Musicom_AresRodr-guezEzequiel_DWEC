@@ -5,7 +5,6 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Registro</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/register.css'>
-    <script src="js/register.js"></script>
 </head>
 <body>
     <section class="contenedor">
@@ -34,6 +33,16 @@
             <a href="login.html" class="contenedor__formulario__boton">Iniciar sesión</a>
         </form>
         
+        <!--
+        En la siguiente función validaremos el formulario mediante expresiones regulares
+
+        Según el campo en el que nos encontremos comprobamos que el campo no esté vacío y que cumpla con la expresión regular correspondiente. Además, dependiendo del error 
+        introucimos un pequeño texto debajo del campo indicando este.
+
+        Si el campo cumple con la expresión regular cambiamos el estilo a correcto.
+
+        -->
+
         <script>
             
             inputNombre.onfocus = function () {

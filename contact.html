@@ -6,42 +6,7 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link id="estilo" rel='stylesheet' type='text/css' media='screen' href='css/contact.css'>
-    <script>
-        function cambiarestilo() {
-            let cadena = document.getElementById("estilo");
-            cadena = cadena.href.split("/");
-            nombre = cadena[cadena.length-1]; 
-            if (nombre == "contact.css") {
-                cadena[cadena.length-1] = "contact-noche.css";
-                cadena = cadena.join("/"); 
-                document.getElementById("estilo").href = cadena;
-
-                let logos = document.querySelectorAll(".logo");
-                for (let i = 0; i < logos.length; i++) {
-                    let cadena = logos[i].src;
-                    let selector = "#" + logos[i].id;
-                    cadena = cadena.split("/");
-                    cadena[cadena.length-1] = "logoNightMode.svg";
-                    cadena = cadena.join("/");
-                    document.querySelector(selector).src = cadena;
-                }
-            } else if (nombre == "contact-noche.css") {
-                cadena[cadena.length-1] = "contact.css";
-                cadena = cadena.join("/"); 
-                document.getElementById("estilo").href = cadena;
-                let logos = document.querySelectorAll(".logo");
-                
-                for (let i = 0; i < logos.length; i++) {
-                    let cadena = logos[i].src;
-                    let selector = "#" + logos[i].id;
-                    cadena = cadena.split("/");
-                    cadena[cadena.length-1] = "logo.svg";
-                    cadena = cadena.join("/");
-                    document.querySelector(selector).src = cadena;
-                }
-            }
-        }
-    </script>
+    <script src="js/cambiarestilo.js"></script>
 </head>
 <body>
     <header>
