@@ -241,12 +241,32 @@ main {
     font-size: 0.9vw;
 }
 
-.main__separador__lista__cancion__ultimoboton {
-    background-color: var(--color-fondo);
-    border: 2px solid var(--color-blanco);
-    color: var(--color-blanco);
+.main__separador__lista__cancion__form {
+    width: 100%;
+    font-family: var(--lexend-deca);
+    font-weight: lighter;
+    border-bottom: 2px solid var(--color-negro);
+    font-size: 1.1vw;
+    color: var(--color-negro);
+}
+
+.main__separador__lista__cancion__form form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+.main__separador__lista__cancion__form input {
+    width: 8vw;
+}
+
+.main__separador__lista__cancion__form__ultimoboton {
+    background-color: var(--color-blanco);
+    border: 2px solid var(--color-negro);
     padding: 0.4vw;
-    border-radius: 10px;
+    border-radius: 0.6vw;
     margin-right: 1vw;
     font-size: 0.9vw;
 }
@@ -484,11 +504,15 @@ footer {
         font-size: 1.3vw;
     }
 
+    .main__separador__lista__cancion__form input {
+        width: 10vw;
+    }
+
     .main__separador__lista__cancion__iconos {
         font-size: 1.3vw;
     }
 
-    .main__separador__lista__cancion__ultimoboton {
+    .main__separador__lista__cancion__form__ultimoboton {
         font-size: 1.3vw;
     }
 

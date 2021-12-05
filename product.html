@@ -52,7 +52,7 @@
                 </ul>
             </section>
             <section class="main__separador__lista">
-                <div class="main__separador__lista__titulo">
+                <div class="main__separador__lista__titulo" id="titulo">
                     <span>Canción</span>
                     <span>Álbum</span>
                     <span>Artista</span>
@@ -85,7 +85,7 @@
                     <span>xxxxxx</span>
                     <span>xxxxxx</span>
                     <span>xxxxxx</span>
-                    <div >
+                    <div>
                         <button class="main__separador__lista__cancion__iconos"><i class="fas fa-share-alt"></i></button>
                         <button class="main__separador__lista__cancion__iconos"><i class="far fa-heart"></i></button>
                         <button class="main__separador__lista__cancion__iconos" onclick="borrar(this)"><i class="fas fa-trash"></i></button>
@@ -96,15 +96,20 @@
                     <span>xxxxxx</span>
                     <span>xxxxxx</span>
                     <span>xxxxxx</span>
-                    <div >
+                    <div>
                         <button class="main__separador__lista__cancion__iconos"><i class="fas fa-share-alt"></i></button>
                         <button class="main__separador__lista__cancion__iconos"><i class="far fa-heart"></i></button>
                         <button class="main__separador__lista__cancion__iconos" onclick="borrar(this)"><i class="fas fa-trash"></i></button>
                     </div>
                 </div>
-                <div class="main__separador__lista__cancion">
-                    <span>Añadir canción</span>
-                    <button class="main__separador__lista__cancion__ultimoboton"><i class="fas fa-plus"></i></button>
+                <div class="main__separador__lista__cancion__form">
+                    <form onsubmit="añadirCancion(this)" id="formulario">
+                        <input type="text" placeholder="Nombre" name="Nombre" id="nombre">
+                        <input type="text" placeholder="Album" name="Album" id="album">
+                        <input type="text" placeholder="Artista" name="Artista" id="artista">
+                        <input type="text" placeholder="Duración" name="Duracion" id="duracion">
+                        <button class="main__separador__lista__cancion__form__ultimoboton"><i class="fas fa-plus"></i></button>
+                    </form>
                 </div>
             </section>
             <section class="main__separador__elementos">
