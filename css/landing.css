@@ -148,6 +148,7 @@ main {
     overflow: scroll;
 }
 
+
 .main__separador__elementos {
     display: flex;
     flex-wrap: wrap;
@@ -318,4 +319,11 @@ CARRUSEL
     max-width: 800vw;
     max-height: 40vh;
     overflow: hidden;
+}
+
+.contenedorJavascript {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }

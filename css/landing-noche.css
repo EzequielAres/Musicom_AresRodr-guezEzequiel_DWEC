@@ -321,3 +321,21 @@ footer {
     width: 38vw;
     background-color: var(--color-blanco);
 }
+
+/*
+CARRUSEL
+*/
+
+
+.gallery {
+    max-width: 800vw;
+    max-height: 40vh;
+    overflow: hidden;
+}
+
+.contenedorJavascript {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}

@@ -3,20 +3,33 @@ NO ESTÁ TERMINADO, LO TERMINARÉ PARA LA PRÓXIMA ENTREGA
 */
 
 
-function anteriorAlbum() {
-    debugger
+function anterior(tipo) {
+    let div = "";
 
-    let div = document.querySelector("#albumes");
-    let objetivo = document.querySelector("#blancoAlbum");
-    let cambio = div.querySelector("#albumes>figure:last-child");
-    objetivo.prepend(cambio);
+    if (tipo == 'album') {
+        div = document.querySelector("#blancoAlbum");
+    } else if (tipo == 'playlist') {
+        div = document.querySelector("#blancoPlaylist");
+    } else if (tipo == 'artista') {
+        div = document.querySelector("#blancoArtista");
+    }
+
+
+    let cambio = div.querySelector("figure:last-child");
+    div.prepend(cambio);
 }
 
-function siguienteAlbum() {
-    debugger
+function siguiente(tipo) {
+    let div = "";
 
-    let div = document.querySelector("#albumes");
-    let objetivo = document.querySelector("#albumes>figure:last-child");
-    let cambio = div.querySelector("#albumes>figure");
-    objetivo.append(cambio);
+    if (tipo == 'album') {
+        div = document.querySelector("#blancoAlbum");
+    } else if (tipo == 'playlist') {
+        div = document.querySelector("#blancoPlaylist");
+    } else if (tipo == 'artista') {
+        div = document.querySelector("#blancoArtista");
+    }
+
+    let cambio = div.querySelector("figure");
+    div.append(cambio);
 }

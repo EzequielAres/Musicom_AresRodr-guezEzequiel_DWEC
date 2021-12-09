@@ -40,107 +40,141 @@
                 <input type="text" class="main__separador__buscador__input">
                 <i class="fa fa-search main__separador__buscador__icono"></i>
             </div>
-            <section class="main__separador__elementos gallery" id="albumes">
+            <section class="main__separador__elementos gallery">
                 <div class="main__separador__elementos__titulo">
                     <h1>Tus álbumes</h1>
                     <div class="main__separador__elementos__titulo__iconos">
-                        <i class="fas fa-chevron-left" onclick="anteriorAlbum()"></i>
-                        <i class="fas fa-chevron-right" onclick="siguienteAlbum()"></i>
+                        <i class="fas fa-chevron-left" onclick="anterior('album')"></i>
+                        <i class="fas fa-chevron-right" onclick="siguiente('album')"></i>
                     </div>
                 </div>
-                <span id="blancoAlbum"></span>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo album (overflow)</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo album (overflow)</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
-                </figure>
+                <div class="contenedorJavascript" id="blancoAlbum">
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo album</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo album (overflow)</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="album" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo album (overflow)</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Artista</h3>
+                    </figure>
+                </div>
+                
             </section>
-            <section class="main__separador__elementos">
+            <section class="main__separador__elementos gallery">
                 <div class="main__separador__elementos__titulo">
                     <h1>Tus playlists</h1>
                     <div class="main__separador__elementos__titulo__iconos">
-                        <i class="fas fa-chevron-left"></i>
-                        <i class="fas fa-chevron-right"></i>
+                        <i class="fas fa-chevron-left" onclick="anterior('playlist')"></i>
+                        <i class="fas fa-chevron-right" onclick="siguiente('playlist')"></i>
                     </div>
                 </div>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo plylist</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo plylist</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo plylist</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
-                    <h2 class="main__separador__elementos__elemento__titulo">Titulo plylist</h2>
-                    <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
-                </figure>
+
+                <div class="contenedorJavascript" id="blancoPlaylist">
+
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo playlist</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo playlist</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo playlist</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo playlist</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
+                    </figure>
+
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo playlist (Overflow)</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada">
+                        <h2 class="main__separador__elementos__elemento__titulo">Titulo playlist (Overflow)</h2>
+                        <h3 class="main__separador__elementos__elemento__creador">Creador</h3>
+                    </figure>
+
+                </div>
             </section>
-            <section class="main__separador__elementos">
+            <section class="main__separador__elementos gallery">
                 <div class="main__separador__elementos__titulo">
                     <h1>Artistas que sigues</h1>
                     <div class="main__separador__elementos__titulo__iconos">
-                        <i class="fas fa-chevron-left"></i>
-                        <i class="fas fa-chevron-right"></i>
+                        <i class="fas fa-chevron-left" onclick="anterior('artista')"></i>
+                        <i class="fas fa-chevron-right" onclick="siguiente('artista')"></i>
                     </div>
                 </div>
-                <figure class="main__separador__elementos__elemento">
-                    <div class="portadaArtista">
-                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
-                    </div>
-                    <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <div class="portadaArtista">
-                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
-                    </div>
-                    <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <div class="portadaArtista">
-                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
-                    </div>
-                    <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
-                </figure>
-                <figure class="main__separador__elementos__elemento">
-                    <div class="portadaArtista">
-                        <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
-                    </div>
-                    <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
-                </figure>
+
+                <div class="contenedorJavascript" id="blancoArtista">
+                    <figure class="main__separador__elementos__elemento">
+                        <div class="portadaArtista">
+                            <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
+                        </div>
+                        <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <div class="portadaArtista">
+                            <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
+                        </div>
+                        <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <div class="portadaArtista">
+                            <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
+                        </div>
+                        <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <div class="portadaArtista">
+                            <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
+                        </div>
+                        <h2 class="main__separador__elementos__elemento__titulo artista">Artista</h2>
+                    </figure>
+
+                    <figure class="main__separador__elementos__elemento">
+                        <div class="portadaArtista">
+                            <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
+                        </div>
+                        <h2 class="main__separador__elementos__elemento__titulo artista">Artista (Overflow)</h2>
+                    </figure>
+                    <figure class="main__separador__elementos__elemento">
+                        <div class="portadaArtista">
+                            <img src="img/placeholder.png" alt="playlist" class="main__separador__elementos__elemento__portada--artista">
+                        </div>
+                        <h2 class="main__separador__elementos__elemento__titulo artista">Artista (Overflow)</h2>
+                    </figure>
+                </div>
             </section>
         </section>
     </main>
