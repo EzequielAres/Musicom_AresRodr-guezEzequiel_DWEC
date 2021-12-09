@@ -1,5 +1,6 @@
 /*
-    Esta función selecciona el padre del botón que hemos pulsado para tener la referencia del contenedor, una vez seleccionado el contenedor que queremos eliminar se lo indicamos al padre.
+    Esta función selecciona el padre del botón que hemos pulsado para tener la referencia del contenedor, 
+    una vez seleccionado el contenedor que queremos eliminar se lo indicamos al padre.
 */
 
 function borrar(element) {
