@@ -7,3 +7,4 @@ LUGARES DONDE HE UTILIZADO JAVASCRIPT
 - cambiarestilo.js --> Cambio de estilo de las páginas (Night / Light Mode).
 - landing.js --> Carrusel.
 - product.js --> Creación y eliminación de elementos del DOM. 
+- asincrono.js --> Header asíncrono. 
