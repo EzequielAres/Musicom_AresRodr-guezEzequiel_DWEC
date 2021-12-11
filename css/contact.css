@@ -141,6 +141,7 @@ CSS FOOTER
 
 footer {
     border-top: 2px solid var(--color-rojo);
+    background-color: var(--color-blanco);
 }
 
 .footer__primerafila {
